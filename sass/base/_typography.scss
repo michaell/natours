@@ -5,3 +5,35 @@ body {
 	line-height: 1.7;
 	color: #777777;		
 }
+
+.heading-secondary {
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	background-image: linear-gradient(to right, $primary-light, $primary-dark);
+	display: inline-block;
+	background-clip: text;
+	color: transparent;
+	transition: .2s all ease;
+	letter-spacing: 2px;
+	
+
+	&:hover {
+		transform: skewY(2deg) scale(1.1);
+		text-shadow: .5rem 1rem 2rem rgba($dark, .3);
+	}
+}
+
+.heading-tertiary {
+	font-size: $default-font-size;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.paragraph {
+	font-size: $default-font-size;
+
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+}
