@@ -5,11 +5,21 @@
 	text-align: center;
 	border-radius: 3px;
 	box-shadow: 0 1.5rem 4rem rgba($dark, .15);
-	// &__icon {
+	transition: .3s all ease;
 
-	// }
+	&:hover {
+		transform: translateY(-1.5rem) scale(1.03);
+	}
+	
+	&__icon {
+		font-size: 6rem;
+		margin-bottom: 5px;
+		background-image: linear-gradient(to right, $primary-light, $primary-dark);
+		background-clip: text;
+		color: transparent;
+	}
 
-	// &__text {
+	&__text {
 
-	// }
+	}
 }
