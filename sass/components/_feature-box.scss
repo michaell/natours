@@ -16,6 +16,7 @@
 		margin-bottom: 5px;
 		background-image: linear-gradient(to right, $primary-light, $primary-dark);
 		background-clip: text;
+		-webkit-background-clip: text;
 		color: transparent;
 	}
 

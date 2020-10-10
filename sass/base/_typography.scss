@@ -13,6 +13,7 @@ body {
 	background-image: linear-gradient(to right, $primary-light, $primary-dark);
 	display: inline-block;
 	background-clip: text;
+	-webkit-background-clip: text;
 	color: transparent;
 	transition: .2s all ease;
 	letter-spacing: 2px;
