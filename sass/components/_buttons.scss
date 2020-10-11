@@ -36,9 +36,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		z-index: -1;
-		background-color: $light;
-	
+		z-index: -1;	
 		transition: all .4s;
 	
 	}
@@ -46,6 +44,19 @@
 	&--white {
 		background-color: $light;
 		color: #777777;
+
+		&::after {
+			background-color: $light;
+		}
+	}
+
+	&--green {
+		background-color: $primary-color;
+		color: $light;
+
+		&::after {
+			background-color:  $primary-color;
+		}
 	}
 
 	&--animated {

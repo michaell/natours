@@ -1,5 +1,7 @@
 .card {
+
 	//FUNCTIONALITY
+	
 	perspective: 150rem;
 	-moz-perspective: 150rem;
 	position: relative;
@@ -29,6 +31,14 @@
 			&-1 {
 				background: linear-gradient(to right bottom, $secondary-light, $secondary-dark);
 			}
+
+			&-2 {
+				background: linear-gradient(to right bottom, $primary-light, $primary-dark);
+			}
+
+			&-3 {
+				background: linear-gradient(to right bottom, $tertiary-light, $tertiary-dark);
+			}
 		}
 	}
 
@@ -55,10 +65,14 @@
 				url(../img/nat-5.jpg);
 		}
 		&--2 {
-			background-image: url(../img/nat-5.jpg);
+			background-image:
+			linear-gradient(to right bottom, $primary-light, $primary-dark),
+			url(../img/nat-6.jpg);
 		}
 		&--3 {
-			background-image: url(../img/nat-5.jpg);
+			background-image:
+			linear-gradient(to right bottom, $tertiary-light, $tertiary-dark),
+			url(../img/nat-7.jpg);
 		}
 	}
 
@@ -72,17 +86,29 @@
 		text-transform: uppercase;
 		color: $light;
 		width: 65%;
-	}
 
-	.card__heading-title {
-		padding: 1rem 1.5rem;
-		box-decoration-break: clone;
-		-webkit-box-decoration-break: clone;
+		&-title {
+			padding: 1rem 1.5rem;
+			box-decoration-break: clone;
+			-webkit-box-decoration-break: clone;
+	
+			&--1 {
+				background-image: linear-gradient(to right bottom,
+				rgba($secondary-light, .85),
+				rgba($secondary-dark, .85));
+			}
 
-		&--1 {
-			background-image: linear-gradient(to right bottom,
-			rgba($secondary-light, .85),
-			rgba($secondary-dark, .85));
+			&--2 {
+				background-image: linear-gradient(to right bottom,
+				rgba($primary-light, .85),
+				rgba($primary-dark, .85));
+			}
+
+			&--3 {
+				background-image: linear-gradient(to right bottom,
+				rgba($tertiary-light, .85),
+				rgba($tertiary-dark, .85));
+			}
 		}
 	}
 
@@ -100,10 +126,34 @@
 			font-size: 1.5rem;
 			padding: 1rem;
 
-
 			&:not(:last-child) {
 				border-bottom: 1px solid $grey;
 			}
 		}
+	}
+
+	//BACK SIDE STYLING
+
+	&__cta {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+	}
+
+	&__price-box {
+		color: $light;
+	}
+
+	&__price-only {
+		font-size: 1.4rem;
+		text-transform: uppercase;
+	}
+
+	&__price-value {
+		font-size: 6rem;
+		font-weight: 300;
+		margin-bottom: 9rem;
 	}
 }
