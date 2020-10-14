@@ -323,11 +323,26 @@ body {
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
-    background-color: orangered; }
+    position: relative; }
   .story__img {
     height: 100%; }
   .story__text {
-    transform: skewX(12deg); }
+    transform: skewX(12deg);
+    position: relative; }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .3s ease; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
 
 .header {
   height: 95vh;
