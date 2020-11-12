@@ -4,12 +4,26 @@
 		to right bottom,
 		rgba($primary-light, 0.8),
 		rgba($primary-dark, 0.8)),
-	url(../img/hero.jpg);
+	url(../img/hero-small.jpg);
 	background-size: cover;
 	background-position: top;
 	position: relative;
-
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+	@media (min-resolution: 192dpi) and (min-width: 37.5em), //2000px and 600px
+			(min-width: 125em){
+		background-image: linear-gradient(
+		to right bottom,
+		rgba($primary-light, 0.8),
+		rgba($primary-dark, 0.8)),
+	url(../img/hero.jpg);
+	}
+
+	@include respond(phone) {
+		height: 50vh;
+		clip-path: polygon(0 0, 100% 0, 100% 42vh, 0 100%);
+
+	}
 
 	&__logo-box {
 		position: absolute;
@@ -30,28 +44,3 @@
 	text-align: center;
 }
 
-.heading-primary {
-	color: $light;
-	text-transform: uppercase;
-	margin-bottom: 6rem;
-	
-	backface-visibility: hidden; /*фикс возможного "потряхивания" при выполненинии анимации */
-
-	&--main {
-		display: block;
-		font-size: 6rem;
-		font-weight: 400;
-		letter-spacing: 3.5rem;
-		
-		animation: moveInLeft 1s ease-out;
-	}
-	
-	&--sub {
-		display: block;
-		font-size: 2rem;
-		font-weight: 700;
-		letter-spacing: 1.7rem;
-	
-		animation: moveInRight 1s ease-out;
-	}
-}

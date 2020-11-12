@@ -10,19 +10,43 @@
 		z-index: 10;
 		outline-offset: 1.2rem;
 
+		@include respond(phone) {
+			position: relative;
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+
+			&:not(:last-child) {
+				margin-bottom: 2rem;
+			}
+		}
+
 		&--p1 {
 			left: 0;
 			top: -2rem;
+
+			@include respond(phone) {
+				top: 0;
+			}
 		}
 
 		&--p2 {
 			right: 0;
 			top: 2rem;
+
+			@include respond(phone) {
+				top: 0;
+			}
 		}
 
 		&--p3 {
 			left: 20%;
 			top: 10rem;
+
+			@include respond(phone) {
+				left: 0;
+				top: 0;
+			}
 		}
 
 		&:hover {
@@ -30,11 +54,21 @@
 			transform: scale(1.4) translateY(-1rem);
 			box-shadow: 0 2.5rem 4rem rgba($dark, .4);
 			z-index: 20;
+
+			@include respond(phone) {
+				outline: none;
+				transform: none;
+				box-shadow: none;
+			}
 		}
 	}
 
 	&:hover &__photo:not(:hover) {
 		transform: scale(.8);
+
+		@include respond(phone) {
+			transform: scale(1);
+		}
 	}
 }
 

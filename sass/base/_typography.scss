@@ -6,6 +6,38 @@ body {
 	color: #777777;
 }
 
+.heading-primary {
+	color: $light;
+	text-transform: uppercase;
+	margin-bottom: 6rem;
+	
+	backface-visibility: hidden; /*фикс возможного "потряхивания" при выполненинии анимации */
+
+	&--main {
+		display: block;
+		font-size: 6rem;
+		font-weight: 400;
+		letter-spacing: 3.5rem;
+		animation: moveInLeft 1s ease-out;
+
+		@include respond(phone) {
+			letter-spacing: 1rem;
+		}
+	}
+	
+	&--sub {
+		display: block;
+		font-size: 2rem;
+		font-weight: 700;
+		letter-spacing: 1.7rem;
+		animation: moveInRight 1s ease-out;
+
+		@include respond(phone) {
+			letter-spacing: 1rem;
+		}
+	}
+}
+
 .heading-secondary {
 	font-size: 3.5rem;
 	text-transform: uppercase;
@@ -18,6 +50,10 @@ body {
 	transition: .2s all ease;
 	letter-spacing: 2px;
 
+	@include respond(phone) {
+		font-size: 3rem;
+		line-height: 1.2;
+	}
 
 	&:hover {
 		transform: skewY(2deg) scale(1.1);
