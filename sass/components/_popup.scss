@@ -4,11 +4,19 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-color: rgba($dark, .9);
+	background-color: rgba($dark, .87);
 	z-index: 2500;
 	opacity: 0;
 	visibility: hidden;
 	transition: all .3s ease;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+
+	@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		background-color: rgba($dark, .3);
+	}
 
 	&__content {
 		@include center;

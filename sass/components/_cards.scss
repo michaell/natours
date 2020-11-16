@@ -1,7 +1,7 @@
 .card {
 
 	//FUNCTIONALITY
-	
+
 	perspective: 150rem;
 	-moz-perspective: 150rem;
 	position: relative;
@@ -16,6 +16,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
+		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
 
 		border-radius: 3px;
@@ -64,15 +65,17 @@
 				linear-gradient(to right bottom, $secondary-light, $secondary-dark),
 				url(../img/nat-5.jpg);
 		}
+
 		&--2 {
 			background-image:
-			linear-gradient(to right bottom, $primary-light, $primary-dark),
-			url(../img/nat-6.jpg);
+				linear-gradient(to right bottom, $primary-light, $primary-dark),
+				url(../img/nat-6.jpg);
 		}
+
 		&--3 {
 			background-image:
-			linear-gradient(to right bottom, $tertiary-light, $tertiary-dark),
-			url(../img/nat-7.jpg);
+				linear-gradient(to right bottom, $tertiary-light, $tertiary-dark),
+				url(../img/nat-7.jpg);
 		}
 	}
 
@@ -91,23 +94,23 @@
 			padding: 1rem 1.5rem;
 			box-decoration-break: clone;
 			-webkit-box-decoration-break: clone;
-	
+
 			&--1 {
 				background-image: linear-gradient(to right bottom,
-				rgba($secondary-light, .85),
-				rgba($secondary-dark, .85));
+						rgba($secondary-light, .85),
+						rgba($secondary-dark, .85));
 			}
 
 			&--2 {
 				background-image: linear-gradient(to right bottom,
-				rgba($primary-light, .85),
-				rgba($primary-dark, .85));
+						rgba($primary-light, .85),
+						rgba($primary-dark, .85));
 			}
 
 			&--3 {
 				background-image: linear-gradient(to right bottom,
-				rgba($tertiary-light, .85),
-				rgba($tertiary-dark, .85));
+						rgba($tertiary-light, .85),
+						rgba($tertiary-dark, .85));
 			}
 		}
 	}
