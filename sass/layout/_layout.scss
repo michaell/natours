@@ -11,8 +11,8 @@
 	}
 
 	@include respond(phone) {
-		max-width: 85%;
-		padding: 0 2rem;
+		max-width: 95%;
+		padding: 0;
 	}
 
 	@include clearfix;
@@ -23,9 +23,13 @@
 		&:not(:last-child) {
 			margin-right: $gutter-horizontal;
 
+			@include respond(tab-port) {
+				margin-right: $gutter-horizontal-tab-port;
+			}
+
 			@include respond(phone) {
 				margin-right: 0;
-				margin-bottom: $gutter-vertical-phone;
+				margin-bottom: 2.5rem;
 			}
 		}
 
@@ -41,6 +45,10 @@
 
 	.col-1-of-3 {
 		width: calc((100% - #{$gutter-horizontal} * 2) / 3);
+
+		@include respond(tab-port) {
+			width: calc((100% - #{$gutter-horizontal-tab-port} * 2) / 3);
+		}
 	}
 
 	.col-2-of-3 {
@@ -49,10 +57,14 @@
 
 	.col-1-of-4 {
 		width: calc((100% - #{$gutter-horizontal} * 3) / 4);
+
+		@include respond(tab-port) {
+			width: calc((100% - #{$gutter-horizontal-tab-port} * 3) / 4);
+		}
 	}
 
 	.col-2-of-4 {
-		width: calc(((100% - #{$gutter-horizontal} * 3) / 4) * 2 +  #{$gutter-horizontal});
+		width: calc(((100% - #{$gutter-horizontal} * 3) / 4) * 2 + #{$gutter-horizontal});
 
 	}
 

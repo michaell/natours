@@ -9,18 +9,18 @@
 }
 
 .section-features {
-	padding: 20rem 0;
-	background-image: linear-gradient(
-		to right bottom,
-		rgba($primary-light, 0.8),
-		rgba($primary-dark, 0.8)),
-	url(../img/nat-4.jpg);
+	padding: 20rem 1rem;
+	background-image: linear-gradient(to right bottom,
+			rgba($primary-light, 0.8),
+			rgba($primary-dark, 0.8)),
+		url(../img/nat-4.jpg);
 	background-size: cover;
 	margin-top: -10rem;
 
 	transform: skewY(-7deg);
 
-	& > * {    //выбрать все прямых потомков .setion-features (в данном случае это только .row)
+	&>* {
+		//выбрать все прямых потомков .setion-features (в данном случае это только .row)
 		transform: skewY(7deg);
 	}
 
@@ -49,7 +49,7 @@
 }
 
 .section-book {
-	padding: 15rem 0;
+	padding: 15rem 1rem;
 	background: linear-gradient(to right bottom, $primary-light, $primary-dark);
 
 	@include respond(phone) {
@@ -59,18 +59,43 @@
 
 .book {
 	background-image: linear-gradient(105deg,
-												rgba($light, .9) 0%,
-												rgba($light, .9) 50%,
-												transparent 50.1%), //одна десятая процетна добавлено, чтобы край градиента был гладким
-							url(../img/nat-10.jpg);
+			rgba($light, .9) 0%,
+			rgba($light, .9) 50%,
+			transparent 50.1%),
+		//одна десятая процетна добавлено, чтобы край градиента был гладким
+		url(../img/nat-10.jpg);
 	background-size: cover;
 	border-radius: 3px;
 	box-shadow: 0 1.5rem 4rem rgba($dark, .2);
 
-	height: 50rem;
+	@include respond(tab-port) {
+		background-image: linear-gradient(105deg,
+				rgba($light, .9) 0%,
+				rgba($light, .9) 75%,
+				transparent 75.1%),
+			//одна десятая процетна добавлено, чтобы край градиента был гладким
+			url(../img/nat-10.jpg);
+	}
+
+	@include respond(phone) {
+		background: rgba($light, .9);
+	}
+
 
 	&__form {
 		width: 50%;
 		padding: 6rem;
+
+		@include respond(tab-port) {
+			width: 85%;
+		}
+
+		@include respond(phone) {
+			width: 100%;
+			padding: 2rem 4rem;
+			text-align: center;
+		}
 	}
+
+
 }

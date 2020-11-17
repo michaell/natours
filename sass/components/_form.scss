@@ -17,6 +17,10 @@
 		display: block;
 		transition: all .3s ease;
 
+		@include respond(phone) {
+			width: 100%;
+		}
+
 
 		&:focus {
 			outline: none;
@@ -42,7 +46,7 @@
 		transition: all .3s ease;
 	}
 
-	&__input:placeholder-shown + &__label {
+	&__input:placeholder-shown+&__label {
 		opacity: 0;
 		visibility: hidden;
 		transform: translateY(-4rem);
@@ -51,6 +55,7 @@
 	&__radio-group {
 		width: 45%;
 		display: inline-block;
+
 	}
 
 	&__radio-input {
@@ -90,7 +95,8 @@
 		}
 	}
 
-	&__radio-input:checked ~ &__radio-label &__radio-button::after {
+	&__radio-input:checked~&__radio-label &__radio-button::after {
 		opacity: 1;
 	}
+
 }
